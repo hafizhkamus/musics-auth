@@ -2,6 +2,7 @@ package com.auth.app.allbums.music.service.musicauht.service;
 
 
 import com.auth.app.allbums.music.service.musicauht.dao.RegisterDao;
+import com.auth.app.allbums.music.service.musicauht.model.AkunAdmin;
 import com.auth.app.allbums.music.service.musicauht.model.GroupUser;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.dao.EmptyResultDataAccessException;
@@ -17,5 +18,9 @@ public class GroupUserService {
 
     public List<GroupUser> findAll() throws EmptyResultDataAccessException {
         return dao.findAll();
+    }
+
+    public boolean tambahRole(AkunAdmin akunAdmin){
+        return dao.tambahRoleAdmin(akunAdmin);
     }
 }
